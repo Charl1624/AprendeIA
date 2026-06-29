@@ -3,549 +3,352 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aprende IA desde Cero — Tu ruta personalizada</title>
-<meta name="description" content="Plataforma gratuita para aprender Inteligencia Artificial desde cero hasta nivel avanzado. Test de nivel, 30 lecciones, quizzes interactivos.">
-<meta property="og:title" content="Aprende IA desde Cero">
-<meta property="og:description" content="Tu ruta personalizada para dominar la inteligencia artificial. 6 niveles, 30 lecciones, totalmente gratis.">
+<title>Aprende IA — Tu ruta personalizada para dominar la inteligencia artificial</title>
+<meta name="description" content="Plataforma gratuita e interactiva para aprender Inteligencia Artificial desde cero hasta nivel avanzado. Test de nivel, 30+ lecciones, demos interactivas, quizzes y recursos.">
+<meta property="og:title" content="Aprende IA desde Cero — Plataforma Gratuita">
+<meta property="og:description" content="Domina la inteligencia artificial con lecciones interactivas, demos en vivo, quizzes y recursos curados. 100% gratis.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://charl1624.github.io/AprendeIA/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Aprende IA desde Cero">
-<meta name="twitter:description" content="Plataforma gratuita para aprender IA desde cero hasta nivel avanzado.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #fafaf8;
-  --surface: #ffffff;
-  --surface-alt: #f3f2ee;
-  --text: #1a1a1a;
-  --text-2: #5c5c5a;
-  --text-3: #8c8c8a;
-  --border: rgba(0,0,0,0.08);
-  --accent: #2563eb;
-  --accent-hover: #1d4ed8;
-  --accent-bg: #eff6ff;
-  --accent-text: #1e40af;
-  --success: #16a34a;
-  --success-bg: #f0fdf4;
-  --success-text: #166534;
-  --warning-bg: #fffbeb;
-  --warning-text: #92400e;
-  --danger: #dc2626;
-  --danger-bg: #fef2f2;
-  --danger-text: #991b1b;
-  --pro: #7c3aed;
-  --pro-bg: #f5f3ff;
-  --pro-text: #5b21b6;
-  --radius: 10px;
+  --bg: #f8f8f6; --bg2: #f0efeb; --surface: #ffffff; --surface-alt: #f5f4f0;
+  --text: #1a1a18; --text2: #55554f; --text3: #8a8a84; --text4: #b5b5b0;
+  --border: rgba(0,0,0,0.07); --border2: rgba(0,0,0,0.12);
+  --accent: #4f46e5; --accent-h: #4338ca; --accent-bg: #eef2ff; --accent-t: #3730a3;
+  --green: #059669; --green-bg: #ecfdf5; --green-t: #065f46;
+  --amber: #d97706; --amber-bg: #fffbeb; --amber-t: #92400e;
+  --red: #dc2626; --red-bg: #fef2f2; --red-t: #991b1b;
+  --purple: #7c3aed; --purple-bg: #f5f3ff; --purple-t: #5b21b6;
+  --blue: #2563eb; --blue-bg: #eff6ff; --blue-t: #1e40af;
+  --radius: 12px; --radius-sm: 8px;
+  --shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-lg: 0 4px 12px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.08);
   --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #141413;
-    --surface: #1e1e1c;
-    --surface-alt: #2a2a28;
-    --text: #e8e8e6;
-    --text-2: #a3a3a0;
-    --text-3: #6b6b68;
-    --border: rgba(255,255,255,0.08);
-    --accent: #60a5fa;
-    --accent-hover: #93bbfd;
-    --accent-bg: #1e293b;
-    --accent-text: #93c5fd;
-    --success: #4ade80;
-    --success-bg: #14352a;
-    --success-text: #86efac;
-    --warning-bg: #2a2210;
-    --warning-text: #fcd34d;
-    --danger: #f87171;
-    --danger-bg: #2a1515;
-    --danger-text: #fca5a5;
-    --pro: #a78bfa;
-    --pro-bg: #1e1535;
-    --pro-text: #c4b5fd;
+    --bg: #111110; --bg2: #1a1a18; --surface: #1e1e1c; --surface-alt: #262624;
+    --text: #ededeb; --text2: #a8a8a3; --text3: #6e6e69; --text4: #45453f;
+    --border: rgba(255,255,255,0.07); --border2: rgba(255,255,255,0.12);
+    --accent: #818cf8; --accent-h: #a5b4fc; --accent-bg: #1e1b4b; --accent-t: #c7d2fe;
+    --green: #34d399; --green-bg: #022c22; --green-t: #6ee7b7;
+    --amber: #fbbf24; --amber-bg: #27200a; --amber-t: #fcd34d;
+    --red: #f87171; --red-bg: #2a1010; --red-t: #fca5a5;
+    --purple: #a78bfa; --purple-bg: #1a1035; --purple-t: #c4b5fd;
+    --blue: #60a5fa; --blue-bg: #0f1d3a; --blue-t: #93c5fd;
+    --shadow: 0 1px 3px rgba(0,0,0,0.2); --shadow-lg: 0 4px 12px rgba(0,0,0,0.3);
   }
 }
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
-.app { max-width: 720px; margin: 0 auto; padding: 1rem; }
-.screen { display: none; }
-.screen.active { display: block; }
-.hero { text-align: center; padding: 3rem 0 2rem; }
-.hero-icon { font-size: 48px; color: var(--accent); display: inline-block; margin-bottom: 12px; }
-.hero h1 { font-size: 28px; font-weight: 600; margin-bottom: 6px; }
-.hero p { font-size: 15px; color: var(--text-2); max-width: 440px; margin: 0 auto; }
-.stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 2rem 0; }
-.stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; text-align: center; }
-.stat-val { font-size: 26px; font-weight: 600; }
-.stat-label { font-size: 12px; color: var(--text-3); margin-top: 2px; }
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 12px 24px; border-radius: var(--radius); font-size: 15px; font-weight: 500; cursor: pointer; border: none; transition: all 0.15s; font-family: var(--font); }
-.btn-primary { background: var(--accent); color: #fff; width: 100%; }
-.btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); }
-.btn-secondary { background: transparent; border: 1px solid var(--border); color: var(--text); }
-.btn-secondary:hover { background: var(--surface-alt); }
-.btn-small { padding: 8px 16px; font-size: 13px; }
-.hint { text-align: center; font-size: 12px; color: var(--text-3); margin-top: 8px; }
-.progress-bar { height: 6px; background: var(--surface-alt); border-radius: 3px; margin-bottom: 2rem; overflow: hidden; }
-.progress-fill { height: 100%; background: var(--accent); border-radius: 3px; transition: width 0.4s ease; }
-.q-num { font-size: 12px; color: var(--text-3); margin-bottom: 6px; }
-.q-text { font-size: 17px; font-weight: 500; margin-bottom: 1.25rem; line-height: 1.5; }
-.options { display: flex; flex-direction: column; gap: 8px; }
-.opt-btn { text-align: left; padding: 14px 18px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); color: var(--text); font-size: 14px; cursor: pointer; transition: all 0.15s; line-height: 1.5; font-family: var(--font); }
-.opt-btn:hover { border-color: var(--accent); background: var(--accent-bg); }
-.opt-btn:disabled { opacity: 0.6; cursor: default; }
-.opt-btn.correct { border-color: var(--success); background: var(--success-bg); }
-.opt-btn.wrong { border-color: var(--danger); background: var(--danger-bg); }
-.result-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; text-align: center; margin-bottom: 1.5rem; }
-.score-ring { width: 100px; height: 100px; margin: 0 auto 1rem; }
-.level-badge { display: inline-block; padding: 4px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-bottom: 12px; }
-.lv-0 { background: var(--accent-bg); color: var(--accent-text); }
-.lv-1 { background: var(--success-bg); color: var(--success-text); }
-.lv-2 { background: var(--warning-bg); color: var(--warning-text); }
-.lv-3 { background: var(--pro-bg); color: var(--pro-text); }
-.result-title { font-size: 20px; font-weight: 600; margin-bottom: 4px; }
-.result-desc { font-size: 14px; color: var(--text-2); }
-.navbar { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--border); margin-bottom: 1.25rem; position: sticky; top: 0; background: var(--bg); z-index: 10; }
-.nav-brand { display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; color: var(--text); cursor: pointer; }
-.nav-tabs { display: flex; gap: 4px; }
-.nav-tab { padding: 6px 14px; font-size: 13px; color: var(--text-2); cursor: pointer; border: none; background: none; border-radius: var(--radius); font-family: var(--font); transition: all 0.15s; }
-.nav-tab:hover { background: var(--surface-alt); }
-.nav-tab.active { background: var(--accent-bg); color: var(--accent-text); font-weight: 500; }
-.module-list { display: flex; flex-direction: column; gap: 8px; }
-.module-item { display: flex; align-items: center; gap: 14px; padding: 14px 18px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); cursor: pointer; transition: all 0.15s; }
-.module-item:hover { border-color: var(--accent); }
-.module-item.locked { opacity: 0.45; cursor: default; }
-.module-item.locked:hover { border-color: var(--border); }
-.module-item.current { border-color: var(--accent); background: var(--accent-bg); }
-.module-item.done { border-color: var(--success); }
-.mod-icon { font-size: 22px; flex-shrink: 0; }
-.mod-info { flex: 1; }
-.mod-title { font-size: 14px; font-weight: 500; }
-.mod-desc { font-size: 12px; color: var(--text-2); }
-.mod-status { font-size: 18px; flex-shrink: 0; }
-.lesson-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem; margin-bottom: 1rem; }
-.lesson-card h3 { font-size: 17px; font-weight: 600; margin-bottom: 10px; }
-.lesson-card p { font-size: 14px; color: var(--text-2); margin-bottom: 10px; line-height: 1.7; }
-.lesson-card ul { padding-left: 1.25rem; margin-bottom: 10px; }
-.lesson-card li { font-size: 14px; color: var(--text-2); line-height: 1.7; margin-bottom: 4px; }
-.lesson-card strong { color: var(--text); }
-.hl { background: var(--accent-bg); color: var(--accent-text); padding: 2px 8px; border-radius: 4px; font-size: 13px; font-weight: 500; }
-.btn-row { display: flex; gap: 8px; }
-.btn-row .btn { flex: 1; }
-.quiz-feedback { padding: 14px 18px; border-radius: var(--radius); margin-top: 12px; font-size: 14px; line-height: 1.5; }
-.quiz-correct { background: var(--success-bg); color: var(--success-text); }
-.quiz-wrong { background: var(--danger-bg); color: var(--danger-text); }
-.breadcrumb { font-size: 12px; color: var(--text-3); margin-bottom: 8px; }
-.lesson-nav { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 1rem; }
-.lesson-pill { padding: 4px 10px; font-size: 12px; border-radius: 20px; border: 1px solid var(--border); background: var(--surface); color: var(--text-2); cursor: pointer; font-family: var(--font); transition: all 0.15s; white-space: nowrap; }
-.lesson-pill:hover { border-color: var(--accent); }
-.lesson-pill.active { background: var(--accent); color: #fff; border-color: var(--accent); }
-.lesson-pill.completed { background: var(--success-bg); color: var(--success-text); border-color: transparent; }
-.share-section { text-align: center; margin-top: 2rem; padding: 1.5rem; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
-.share-section p { font-size: 14px; color: var(--text-2); margin-bottom: 12px; }
-.share-btns { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
-.share-btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: var(--radius); font-size: 13px; font-weight: 500; border: 1px solid var(--border); background: var(--surface); color: var(--text); cursor: pointer; font-family: var(--font); transition: all 0.15s; text-decoration: none; }
-.share-btn:hover { background: var(--surface-alt); }
-.footer { text-align: center; padding: 2rem 0 1rem; font-size: 12px; color: var(--text-3); }
-@media (max-width: 500px) {
-  .hero h1 { font-size: 22px; }
-  .stats-row { grid-template-columns: repeat(3, 1fr); gap: 6px; }
-  .stat-card { padding: 0.75rem 0.5rem; }
-  .stat-val { font-size: 20px; }
-  .nav-tabs { gap: 2px; }
-  .nav-tab { padding: 6px 10px; font-size: 12px; }
-  .lesson-card { padding: 1.25rem; }
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+body { font-family:var(--font); background:var(--bg); color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased; }
+.app { max-width:800px; margin:0 auto; padding:0 1.25rem; }
+.screen { display:none; animation: fadeIn 0.3s ease; }
+.screen.active { display:block; }
+@keyframes fadeIn { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
+@keyframes slideUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+@keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.05)} }
+@keyframes countUp { from{opacity:0} to{opacity:1} }
+@keyframes confetti { 0%{transform:translateY(0) rotate(0)} 100%{transform:translateY(-20px) rotate(360deg)} }
+
+/* NAV */
+.topbar { display:flex; align-items:center; justify-content:space-between; padding:14px 0; border-bottom:1px solid var(--border); margin-bottom:1.5rem; position:sticky; top:0; background:var(--bg); z-index:100; backdrop-filter:blur(12px); }
+.logo { display:flex; align-items:center; gap:8px; font-size:15px; font-weight:600; color:var(--text); cursor:pointer; text-decoration:none; }
+.logo-icon { width:32px; height:32px; border-radius:8px; background:var(--accent); display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; }
+.nav-pills { display:flex; gap:4px; background:var(--surface-alt); border-radius:var(--radius-sm); padding:3px; }
+.nav-pill { padding:6px 14px; font-size:12px; font-weight:500; color:var(--text3); cursor:pointer; border:none; background:none; border-radius:6px; font-family:var(--font); transition:all 0.15s; }
+.nav-pill:hover { color:var(--text2); }
+.nav-pill.active { background:var(--surface); color:var(--text); box-shadow:var(--shadow); }
+
+/* BUTTONS */
+.btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:12px 24px; border-radius:var(--radius-sm); font-size:14px; font-weight:500; cursor:pointer; border:none; transition:all 0.2s; font-family:var(--font); text-decoration:none; }
+.btn-lg { padding:14px 28px; font-size:15px; border-radius:var(--radius); }
+.btn-primary { background:var(--accent); color:#fff; box-shadow:0 1px 2px rgba(79,70,229,0.3); }
+.btn-primary:hover { background:var(--accent-h); transform:translateY(-1px); box-shadow:0 4px 12px rgba(79,70,229,0.25); }
+.btn-secondary { background:var(--surface); border:1px solid var(--border2); color:var(--text); }
+.btn-secondary:hover { background:var(--surface-alt); border-color:var(--border2); }
+.btn-ghost { background:transparent; color:var(--text2); padding:8px 12px; }
+.btn-ghost:hover { background:var(--surface-alt); color:var(--text); }
+.btn-sm { padding:8px 14px; font-size:12px; }
+.btn-full { width:100%; }
+.btn-success { background:var(--green); color:#fff; }
+.btn-success:hover { filter:brightness(1.1); }
+
+/* CARDS */
+.card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:1.25rem; box-shadow:var(--shadow); transition:all 0.2s; }
+.card:hover { box-shadow:var(--shadow-lg); }
+.card-flat { background:var(--surface-alt); border:none; box-shadow:none; }
+.card-flat:hover { box-shadow:none; }
+.card-accent { border-left:3px solid var(--accent); }
+
+/* BADGES */
+.badge { display:inline-flex; align-items:center; gap:4px; padding:3px 10px; border-radius:20px; font-size:11px; font-weight:600; letter-spacing:0.02em; }
+.badge-accent { background:var(--accent-bg); color:var(--accent-t); }
+.badge-green { background:var(--green-bg); color:var(--green-t); }
+.badge-amber { background:var(--amber-bg); color:var(--amber-t); }
+.badge-red { background:var(--red-bg); color:var(--red-t); }
+.badge-purple { background:var(--purple-bg); color:var(--purple-t); }
+
+/* STATS */
+.stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; }
+.stat { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-sm); padding:1rem; text-align:center; }
+.stat-value { font-size:28px; font-weight:700; color:var(--text); line-height:1.2; }
+.stat-label { font-size:11px; color:var(--text3); margin-top:2px; text-transform:uppercase; letter-spacing:0.05em; }
+
+/* PROGRESS */
+.progress { height:6px; background:var(--surface-alt); border-radius:3px; overflow:hidden; }
+.progress-fill { height:100%; border-radius:3px; transition:width 0.6s ease; background:linear-gradient(90deg, var(--accent), var(--purple)); }
+
+/* HERO */
+.hero { text-align:center; padding:4rem 0 2.5rem; }
+.hero-badge { margin-bottom:16px; }
+.hero-icon-wrap { width:72px; height:72px; border-radius:20px; background:var(--accent-bg); display:inline-flex; align-items:center; justify-content:center; margin-bottom:20px; }
+.hero-icon-wrap i { font-size:36px; color:var(--accent); }
+.hero h1 { font-size:32px; font-weight:700; line-height:1.2; margin-bottom:10px; }
+.hero h1 span { background:linear-gradient(135deg, var(--accent), var(--purple)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.hero-desc { font-size:16px; color:var(--text2); max-width:500px; margin:0 auto 2rem; line-height:1.7; }
+
+/* FEATURES */
+.features { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; margin:2rem 0; }
+.feature { padding:1.25rem; border-radius:var(--radius); background:var(--surface); border:1px solid var(--border); }
+.feature-icon { width:40px; height:40px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:18px; margin-bottom:10px; }
+.feature h3 { font-size:14px; font-weight:600; margin-bottom:4px; }
+.feature p { font-size:12px; color:var(--text2); line-height:1.5; }
+
+/* MODULE LIST */
+.module { display:flex; align-items:center; gap:16px; padding:16px 20px; border:1px solid var(--border); border-radius:var(--radius); background:var(--surface); cursor:pointer; transition:all 0.2s; margin-bottom:8px; }
+.module:hover { border-color:var(--accent); box-shadow:var(--shadow-lg); transform:translateY(-1px); }
+.module.locked { opacity:0.4; cursor:default; }
+.module.locked:hover { border-color:var(--border); box-shadow:none; transform:none; }
+.module.current { border-color:var(--accent); background:var(--accent-bg); }
+.module.done { border-color:var(--green); }
+.module-num { width:36px; height:36px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; flex-shrink:0; }
+.module-info { flex:1; min-width:0; }
+.module-title { font-size:14px; font-weight:600; }
+.module-desc { font-size:12px; color:var(--text2); margin-top:1px; }
+.module-meta { display:flex; gap:8px; margin-top:4px; }
+.module-progress { flex:1; max-width:120px; margin-top:4px; }
+.module-right { display:flex; align-items:center; gap:8px; flex-shrink:0; }
+
+/* LESSON VIEW */
+.lesson-header { margin-bottom:1.5rem; }
+.lesson-header h2 { font-size:22px; font-weight:700; line-height:1.3; margin-top:8px; }
+.lesson-body { font-size:15px; color:var(--text); line-height:1.8; }
+.lesson-body h3 { font-size:17px; font-weight:600; margin:1.5rem 0 0.75rem; color:var(--text); }
+.lesson-body p { margin-bottom:1rem; }
+.lesson-body ul, .lesson-body ol { margin-bottom:1rem; padding-left:1.5rem; }
+.lesson-body li { margin-bottom:6px; line-height:1.7; }
+
+/* DEFINITION BOXES */
+.def-box { background:var(--accent-bg); border:1px solid rgba(79,70,229,0.15); border-radius:var(--radius-sm); padding:14px 18px; margin:1rem 0; }
+.def-box .def-term { font-size:13px; font-weight:700; color:var(--accent-t); text-transform:uppercase; letter-spacing:0.04em; margin-bottom:4px; }
+.def-box .def-text { font-size:14px; color:var(--text); line-height:1.6; }
+
+/* KEY CONCEPT */
+.concept-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:1.25rem; margin:1rem 0; }
+.concept-card .concept-title { display:flex; align-items:center; gap:8px; font-size:14px; font-weight:600; margin-bottom:8px; }
+.concept-card .concept-title i { color:var(--accent); }
+
+/* INTERACTIVE DEMO */
+.demo-box { background:var(--bg2); border:1px solid var(--border); border-radius:var(--radius); padding:1.25rem; margin:1.25rem 0; }
+.demo-box .demo-title { display:flex; align-items:center; gap:8px; font-size:13px; font-weight:600; color:var(--accent-t); margin-bottom:12px; }
+.demo-box canvas { width:100%; border-radius:var(--radius-sm); }
+.demo-controls { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-top:12px; }
+.demo-controls label { font-size:12px; color:var(--text2); font-weight:500; }
+.demo-controls input[type="range"] { flex:1; min-width:100px; accent-color:var(--accent); }
+.demo-controls .demo-val { font-size:13px; font-weight:600; color:var(--text); min-width:40px; }
+
+/* CODE BLOCK */
+.code-block { background:#1e1e2e; border-radius:var(--radius-sm); padding:16px 20px; margin:1rem 0; overflow-x:auto; position:relative; }
+.code-block code { font-family:'SF Mono','Fira Code',monospace; font-size:13px; color:#cdd6f4; line-height:1.7; white-space:pre; }
+.code-block .code-lang { position:absolute; top:8px; right:12px; font-size:10px; color:#6c7086; text-transform:uppercase; font-weight:600; }
+.code-block .kw { color:#cba6f7; } .code-block .fn { color:#89b4fa; } .code-block .str { color:#a6e3a1; }
+.code-block .cm { color:#6c7086; font-style:italic; } .code-block .num { color:#fab387; } .code-block .op { color:#89dceb; }
+
+/* RESOURCE CARDS */
+.resources { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px; margin:1rem 0; }
+.resource { display:flex; align-items:center; gap:12px; padding:12px 16px; border:1px solid var(--border); border-radius:var(--radius-sm); background:var(--surface); transition:all 0.15s; text-decoration:none; color:var(--text); }
+.resource:hover { border-color:var(--accent); background:var(--accent-bg); }
+.resource-icon { width:36px; height:36px; border-radius:8px; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:16px; }
+.resource-info { flex:1; min-width:0; }
+.resource-title { font-size:13px; font-weight:500; }
+.resource-type { font-size:11px; color:var(--text3); }
+
+/* QUIZ */
+.quiz-box { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:1.5rem; margin:1.5rem 0; }
+.quiz-q { font-size:16px; font-weight:600; margin-bottom:1rem; line-height:1.5; }
+.quiz-opts { display:flex; flex-direction:column; gap:8px; }
+.quiz-opt { display:flex; align-items:center; gap:12px; padding:12px 16px; border:1.5px solid var(--border); border-radius:var(--radius-sm); background:var(--surface); cursor:pointer; transition:all 0.15s; font-family:var(--font); font-size:14px; color:var(--text); text-align:left; }
+.quiz-opt:hover { border-color:var(--accent); background:var(--accent-bg); }
+.quiz-opt.correct { border-color:var(--green); background:var(--green-bg); }
+.quiz-opt.wrong { border-color:var(--red); background:var(--red-bg); }
+.quiz-opt.disabled { pointer-events:none; opacity:0.7; }
+.quiz-opt .opt-letter { width:28px; height:28px; border-radius:50%; background:var(--surface-alt); display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; color:var(--text2); flex-shrink:0; }
+.quiz-explain { margin-top:12px; padding:14px 18px; border-radius:var(--radius-sm); font-size:13px; line-height:1.6; }
+.quiz-explain.correct { background:var(--green-bg); color:var(--green-t); }
+.quiz-explain.wrong { background:var(--red-bg); color:var(--red-t); }
+
+/* TOOLTIP */
+.tip { position:relative; border-bottom:1px dashed var(--accent); color:var(--accent-t); cursor:help; font-weight:500; }
+.tip:hover .tip-content { display:block; }
+.tip-content { display:none; position:absolute; bottom:calc(100% + 8px); left:50%; transform:translateX(-50%); width:280px; padding:12px 16px; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-sm); box-shadow:var(--shadow-lg); font-size:12px; color:var(--text2); line-height:1.5; font-weight:400; z-index:50; }
+
+/* STREAK / GAMIFICATION */
+.streak-bar { display:flex; align-items:center; gap:12px; padding:10px 16px; background:var(--amber-bg); border-radius:var(--radius-sm); margin-bottom:1rem; }
+.streak-icon { font-size:20px; color:var(--amber); }
+.streak-text { font-size:13px; font-weight:500; color:var(--amber-t); }
+.xp-toast { position:fixed; top:80px; right:20px; padding:10px 18px; background:var(--accent); color:#fff; border-radius:var(--radius-sm); font-size:13px; font-weight:600; z-index:200; animation:slideUp 0.3s ease, fadeOut 0.3s ease 1.5s forwards; box-shadow:var(--shadow-lg); }
+@keyframes fadeOut { to{opacity:0;transform:translateY(-10px)} }
+
+/* LESSON NAV PILLS */
+.lesson-pills { display:flex; gap:4px; flex-wrap:wrap; margin-bottom:1rem; }
+.l-pill { width:32px; height:32px; border-radius:50%; border:1.5px solid var(--border); background:var(--surface); display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:600; color:var(--text3); cursor:pointer; transition:all 0.15s; }
+.l-pill:hover { border-color:var(--accent); }
+.l-pill.active { background:var(--accent); color:#fff; border-color:var(--accent); }
+.l-pill.done { background:var(--green-bg); color:var(--green-t); border-color:var(--green); }
+
+/* SHARE */
+.share-card { text-align:center; padding:2rem 1.5rem; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); margin-top:2rem; }
+.share-btns { display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-top:12px; }
+.share-btn { display:inline-flex; align-items:center; gap:6px; padding:8px 16px; border-radius:var(--radius-sm); font-size:13px; font-weight:500; border:1px solid var(--border); background:var(--surface); color:var(--text); cursor:pointer; font-family:var(--font); transition:all 0.15s; text-decoration:none; }
+.share-btn:hover { background:var(--surface-alt); border-color:var(--border2); }
+
+/* FOOTER */
+.footer { text-align:center; padding:2.5rem 0 1.5rem; font-size:12px; color:var(--text4); }
+
+/* GLOSSARY MODAL */
+.modal-overlay { display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); z-index:300; animation:fadeIn 0.2s; }
+.modal-overlay.show { display:flex; align-items:center; justify-content:center; }
+.modal { background:var(--surface); border-radius:16px; padding:1.5rem; max-width:560px; width:90%; max-height:80vh; overflow-y:auto; box-shadow:var(--shadow-lg); }
+.modal h2 { font-size:18px; font-weight:700; margin-bottom:12px; }
+.modal-close { position:absolute; top:16px; right:16px; background:none; border:none; font-size:18px; color:var(--text3); cursor:pointer; }
+.glossary-item { padding:10px 0; border-bottom:1px solid var(--border); }
+.glossary-term { font-size:14px; font-weight:600; color:var(--accent-t); }
+.glossary-def { font-size:13px; color:var(--text2); margin-top:2px; line-height:1.5; }
+
+/* RESPONSIVE */
+@media (max-width:600px) {
+  .hero h1 { font-size:24px; }
+  .hero-desc { font-size:14px; }
+  .features { grid-template-columns:1fr; }
+  .stats { grid-template-columns:repeat(2,1fr); }
+  .nav-pills { gap:2px; }
+  .nav-pill { padding:6px 10px; font-size:11px; }
+  .resources { grid-template-columns:1fr; }
+  .module { padding:12px 14px; gap:12px; }
+  .lesson-body { font-size:14px; }
+  .tip-content { width:220px; }
 }
 </style>
 </head>
 <body>
-<div class="app">
-
+<div class="app" id="app">
   <!-- LANDING -->
   <div class="screen active" id="screen-landing">
     <div class="hero">
-      <i class="ti ti-brain hero-icon" aria-hidden="true"></i>
-      <h1>Aprende IA desde cero</h1>
-      <p>Tu ruta personalizada para dominar la inteligencia artificial. Desde los fundamentos hasta técnicas avanzadas.</p>
-    </div>
-    <div class="stats-row">
-      <div class="stat-card"><div class="stat-val">6</div><div class="stat-label">Niveles</div></div>
-      <div class="stat-card"><div class="stat-val">30</div><div class="stat-label">Lecciones</div></div>
-      <div class="stat-card"><div class="stat-val" style="font-size:20px">100%</div><div class="stat-label">Gratis</div></div>
-    </div>
-    <button class="btn btn-primary" onclick="startTest()">
-      <i class="ti ti-clipboard-check" aria-hidden="true"></i>Comenzar test de nivel
-    </button>
-    <p class="hint">10 preguntas — menos de 3 minutos</p>
-
-    <div style="margin-top:2rem;">
-      <p style="font-size:14px; font-weight:500; margin-bottom:10px; text-align:center;">¿Qué vas a aprender?</p>
-      <div class="module-list" id="preview-modules"></div>
+      <div class="hero-badge"><span class="badge badge-accent"><i class="ti ti-sparkles" aria-hidden="true"></i> 100% gratuito</span></div>
+      <div class="hero-icon-wrap"><i class="ti ti-brain" aria-hidden="true"></i></div>
+      <h1>Aprende <span>inteligencia artificial</span> desde cero</h1>
+      <p class="hero-desc">Lecciones interactivas, demos en vivo, quizzes con explicaciones y recursos curados. Tu ruta personalizada para ir de principiante a avanzado.</p>
+      <button class="btn btn-primary btn-lg" onclick="startTest()">
+        <i class="ti ti-clipboard-check" aria-hidden="true"></i>Hacer test de nivel
+      </button>
+      <p style="font-size:12px;color:var(--text4);margin-top:8px;">10 preguntas — te ubica en el módulo perfecto para ti</p>
     </div>
 
-    <div class="footer">Creado con IA — Comparte y aprende gratis</div>
+    <div class="features" id="landing-features"></div>
+
+    <p style="font-size:16px;font-weight:600;margin:2rem 0 1rem;text-align:center;">Tu ruta de aprendizaje</p>
+    <div id="landing-modules"></div>
+
+    <div class="footer">Creado por <strong>Carlos Agamez</strong> — Comparte y aprende gratis</div>
   </div>
 
   <!-- TEST -->
   <div class="screen" id="screen-test">
-    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1rem;">
-      <button class="btn btn-secondary btn-small" onclick="show('landing')"><i class="ti ti-arrow-left" aria-hidden="true"></i> Volver</button>
-      <span class="q-num" id="q-counter"></span>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;">
+      <button class="btn btn-ghost btn-sm" onclick="show('landing')"><i class="ti ti-arrow-left" aria-hidden="true"></i> Volver</button>
+      <span style="font-size:13px;font-weight:600;color:var(--text2);" id="q-counter"></span>
     </div>
-    <div class="progress-bar"><div class="progress-fill" id="test-progress" style="width:10%"></div></div>
-    <div class="q-text" id="q-text"></div>
-    <div class="options" id="q-options"></div>
+    <div class="progress" style="margin-bottom:2rem;"><div class="progress-fill" id="test-progress" style="width:10%"></div></div>
+    <div id="q-category" class="badge badge-accent" style="margin-bottom:12px;"></div>
+    <div style="font-size:18px;font-weight:600;line-height:1.5;margin-bottom:1.25rem;" id="q-text"></div>
+    <div class="quiz-opts" id="q-options"></div>
   </div>
 
   <!-- RESULTS -->
   <div class="screen" id="screen-results">
-    <div class="result-card">
-      <svg class="score-ring" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="42" fill="none" stroke="var(--border)" stroke-width="6"/>
-        <circle id="score-circle" cx="50" cy="50" r="42" fill="none" stroke="var(--accent)" stroke-width="6" stroke-linecap="round" stroke-dasharray="263.9" stroke-dashoffset="263.9" transform="rotate(-90 50 50)" style="transition: stroke-dashoffset 1s ease;"/>
-        <text x="50" y="46" text-anchor="middle" font-size="22" font-weight="600" fill="var(--text)" id="score-text">0%</text>
-        <text x="50" y="62" text-anchor="middle" font-size="10" fill="var(--text-3)">aciertos</text>
+    <div class="card" style="text-align:center;padding:2rem;">
+      <svg width="120" height="120" viewBox="0 0 120 120" style="margin-bottom:1rem;">
+        <circle cx="60" cy="60" r="52" fill="none" stroke="var(--border)" stroke-width="8"/>
+        <circle id="score-circle" cx="60" cy="60" r="52" fill="none" stroke="var(--accent)" stroke-width="8" stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="326.7" transform="rotate(-90 60 60)" style="transition:stroke-dashoffset 1.2s ease;"/>
+        <text x="60" y="56" text-anchor="middle" font-size="28" font-weight="700" fill="var(--text)" id="score-text">0%</text>
+        <text x="60" y="74" text-anchor="middle" font-size="11" fill="var(--text3)">aciertos</text>
       </svg>
-      <div class="level-badge" id="level-badge"></div>
-      <div class="result-title" id="result-title"></div>
-      <div class="result-desc" id="result-desc"></div>
+      <div id="level-badge" class="badge" style="margin-bottom:12px;"></div>
+      <h2 style="font-size:22px;font-weight:700;margin-bottom:6px;" id="result-title"></h2>
+      <p style="font-size:14px;color:var(--text2);line-height:1.6;" id="result-desc"></p>
     </div>
-    <button class="btn btn-primary" onclick="goToCourse()">
-      <i class="ti ti-arrow-right" aria-hidden="true"></i>Ir a mi ruta de aprendizaje
+    <button class="btn btn-primary btn-full btn-lg" style="margin-top:1rem;" onclick="goToCourse()">
+      <i class="ti ti-rocket" aria-hidden="true"></i>Comenzar mi ruta
     </button>
-    <p class="hint">Tu progreso se guarda en este navegador</p>
   </div>
 
   <!-- COURSE -->
   <div class="screen" id="screen-course">
-    <div class="navbar">
-      <div class="nav-brand" onclick="show('landing')"><i class="ti ti-brain" aria-hidden="true"></i> Aprende IA</div>
-      <div class="nav-tabs">
-        <button class="nav-tab active" data-tab="ruta" onclick="showTab('ruta',this)"><i class="ti ti-map" aria-hidden="true"></i> Ruta</button>
-        <button class="nav-tab" data-tab="leccion" onclick="showTab('leccion',this)"><i class="ti ti-book" aria-hidden="true"></i> Lección</button>
-        <button class="nav-tab" data-tab="quiz" onclick="showTab('quiz',this)"><i class="ti ti-help" aria-hidden="true"></i> Quiz</button>
+    <div class="topbar">
+      <a class="logo" onclick="show('landing')"><div class="logo-icon"><i class="ti ti-brain" aria-hidden="true"></i></div>Aprende IA</a>
+      <div class="nav-pills">
+        <button class="nav-pill active" data-tab="ruta" onclick="showTab('ruta',this)"><i class="ti ti-map-2" aria-hidden="true"></i> Ruta</button>
+        <button class="nav-pill" data-tab="leccion" onclick="showTab('leccion',this)"><i class="ti ti-book-2" aria-hidden="true"></i> Lección</button>
+        <button class="nav-pill" data-tab="quiz" onclick="showTab('quiz',this)"><i class="ti ti-brain" aria-hidden="true"></i> Quiz</button>
+        <button class="nav-pill" data-tab="glosario" onclick="showTab('glosario',this)"><i class="ti ti-vocabulary" aria-hidden="true"></i> Glosario</button>
       </div>
     </div>
 
-    <div class="stats-row">
-      <div class="stat-card"><div class="stat-val" id="s-level">1</div><div class="stat-label">Nivel actual</div></div>
-      <div class="stat-card"><div class="stat-val" id="s-progress">0%</div><div class="stat-label">Progreso</div></div>
-      <div class="stat-card"><div class="stat-val" id="s-lessons">0</div><div class="stat-label">Completadas</div></div>
+    <div id="streak-area"></div>
+
+    <div class="stats" style="margin-bottom:1.25rem;">
+      <div class="stat"><div class="stat-value" id="s-level">1</div><div class="stat-label">Nivel</div></div>
+      <div class="stat"><div class="stat-value" id="s-xp">0</div><div class="stat-label">XP</div></div>
+      <div class="stat"><div class="stat-value" id="s-progress">0%</div><div class="stat-label">Progreso</div></div>
+      <div class="stat"><div class="stat-value" id="s-lessons">0</div><div class="stat-label">Lecciones</div></div>
     </div>
 
-    <div id="tab-ruta"><div class="module-list" id="module-list"></div></div>
-
+    <div id="tab-ruta"><div id="module-list"></div></div>
     <div id="tab-leccion" style="display:none;">
-      <div class="lesson-nav" id="lesson-nav"></div>
+      <div class="lesson-pills" id="lesson-nav"></div>
       <div id="lesson-area"></div>
-      <div class="btn-row" style="margin-top:1rem;">
+      <div style="display:flex;gap:8px;margin-top:1.5rem;">
         <button class="btn btn-secondary" onclick="prevLesson()"><i class="ti ti-arrow-left" aria-hidden="true"></i> Anterior</button>
-        <button class="btn btn-primary" onclick="completeLesson()">Completar <i class="ti ti-arrow-right" aria-hidden="true"></i></button>
+        <button class="btn btn-primary" style="flex:1" id="btn-complete" onclick="completeLesson()">Completar y continuar <i class="ti ti-arrow-right" aria-hidden="true"></i></button>
       </div>
     </div>
-
     <div id="tab-quiz" style="display:none;"><div id="quiz-area"></div></div>
+    <div id="tab-glosario" style="display:none;"><div id="glossary-area"></div></div>
 
-    <div class="share-section">
-      <p>¿Te está gustando? Compártelo con alguien que quiera aprender IA</p>
+    <div class="share-card">
+      <i class="ti ti-share" style="font-size:24px;color:var(--accent);margin-bottom:8px;display:block;" aria-hidden="true"></i>
+      <p style="font-size:14px;font-weight:500;">¿Te está sirviendo? Compártelo</p>
+      <p style="font-size:12px;color:var(--text3);margin-bottom:12px;">Ayuda a más personas a aprender IA gratis</p>
       <div class="share-btns">
-        <a class="share-btn" id="share-wa" target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp" aria-hidden="true"></i> WhatsApp</a>
-        <a class="share-btn" id="share-tw" target="_blank" rel="noopener"><i class="ti ti-brand-x" aria-hidden="true"></i> X</a>
-        <a class="share-btn" id="share-li" target="_blank" rel="noopener"><i class="ti ti-brand-linkedin" aria-hidden="true"></i> LinkedIn</a>
-        <button class="share-btn" onclick="copyLink()"><i class="ti ti-copy" aria-hidden="true"></i> Copiar link</button>
+        <a class="share-btn" id="share-wa" target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp" aria-hidden="true"></i>WhatsApp</a>
+        <a class="share-btn" id="share-tw" target="_blank" rel="noopener"><i class="ti ti-brand-x" aria-hidden="true"></i>X</a>
+        <a class="share-btn" id="share-li" target="_blank" rel="noopener"><i class="ti ti-brand-linkedin" aria-hidden="true"></i>LinkedIn</a>
+        <button class="share-btn" onclick="copyLink()"><i class="ti ti-link" aria-hidden="true"></i>Copiar link</button>
       </div>
     </div>
+    <div class="footer">Creado por <strong>Carlos Agamez</strong> — Aprende IA desde Cero</div>
   </div>
 </div>
 
-<script>
-const questions = [
-  { q: "¿Qué es la inteligencia artificial?", opts: ["No tengo idea", "Algo relacionado con robots", "Sistemas que simulan inteligencia humana", "Redes neuronales profundas exclusivamente"], correct: 2, diff: 0 },
-  { q: "¿Cuál es la diferencia entre IA, machine learning y deep learning?", opts: ["Son lo mismo", "No estoy seguro", "ML es un subconjunto de IA, DL es un subconjunto de ML", "Deep learning es más simple que machine learning"], correct: 2, diff: 1 },
-  { q: "¿Qué es un dataset en el contexto de IA?", opts: ["Un tipo de algoritmo", "Un conjunto de datos para entrenar modelos", "Un lenguaje de programación", "No sé"], correct: 1, diff: 0 },
-  { q: "¿Qué lenguaje de programación es más usado en IA?", opts: ["Java", "Python", "C++", "No conozco ninguno"], correct: 1, diff: 1 },
-  { q: "¿Qué es una red neuronal?", opts: ["Un cable de internet", "No sé", "Un modelo inspirado en el cerebro humano", "Un tipo de base de datos"], correct: 2, diff: 1 },
-  { q: "¿Qué significa 'entrenar' un modelo de IA?", opts: ["Instalarlo en un servidor", "Ajustar sus parámetros con datos para que aprenda patrones", "Darle instrucciones escritas manualmente", "No estoy seguro"], correct: 1, diff: 2 },
-  { q: "¿Qué es overfitting?", opts: ["Un modelo que memoriza datos de entrenamiento y generaliza mal", "Un modelo muy grande", "Un error de programación", "No sé qué es"], correct: 0, diff: 2 },
-  { q: "¿Qué es un transformer en IA?", opts: ["Un robot que cambia de forma", "No sé", "Una arquitectura de red neuronal basada en atención", "Un preprocesador de datos"], correct: 2, diff: 3 },
-  { q: "¿Qué es transfer learning?", opts: ["Mover datos entre servidores", "Usar un modelo preentrenado y adaptarlo a una nueva tarea", "No tengo idea", "Entrenar desde cero siempre"], correct: 1, diff: 3 },
-  { q: "¿Qué es un LLM (large language model)?", opts: ["Un tipo de base de datos", "No sé", "Un modelo de lenguaje entrenado con grandes cantidades de texto", "Un framework de programación"], correct: 2, diff: 3 }
-];
-
-const modules = [
-  { title: "Fundamentos de IA", desc: "Conceptos básicos, historia y tipos de IA", icon: "ti-bulb", lessons: [
-    { title: "¿Qué es la inteligencia artificial?", content: "<h3>¿Qué es la inteligencia artificial?</h3><p>La inteligencia artificial (IA) es la rama de la informática que busca crear sistemas capaces de realizar tareas que normalmente requieren inteligencia humana.</p><p>Esto incluye:</p><ul><li><span class='hl'>Aprendizaje</span> — la capacidad de mejorar con la experiencia</li><li><span class='hl'>Razonamiento</span> — resolver problemas y tomar decisiones</li><li><span class='hl'>Percepción</span> — entender imágenes, texto y sonido</li><li><span class='hl'>Interacción</span> — comunicarse en lenguaje natural</li></ul><p>La IA no es un concepto nuevo. Sus raíces se remontan a los años 50 con Alan Turing y su famosa pregunta: ¿pueden pensar las máquinas?</p>", quiz: { q: "¿Cuál de estas NO es una capacidad típica de la IA?", opts: ["Aprendizaje", "Teletransportación", "Razonamiento", "Percepción"], correct: 1 } },
-    { title: "Historia breve de la IA", content: "<h3>Historia breve de la IA</h3><p>La IA ha pasado por varias etapas clave:</p><ul><li><span class='hl'>1950s</span> — Alan Turing propone el Test de Turing. Nace el término 'inteligencia artificial' en Dartmouth (1956)</li><li><span class='hl'>1960-70s</span> — Primeros programas de lógica y lenguaje natural</li><li><span class='hl'>1980s</span> — Sistemas expertos. Primer 'invierno' de la IA</li><li><span class='hl'>1990-2000s</span> — ML estadístico gana tracción. Deep Blue vence a Kasparov (1997)</li><li><span class='hl'>2010s</span> — Deep learning revoluciona visión y lenguaje. AlphaGo (2016)</li><li><span class='hl'>2020s</span> — LLMs como GPT y Claude transforman la interacción humano-máquina</li></ul>", quiz: { q: "¿En qué década se acuñó el término 'inteligencia artificial'?", opts: ["1940s", "1950s", "1970s", "1990s"], correct: 1 } },
-    { title: "Tipos de IA", content: "<h3>Tipos de inteligencia artificial</h3><p><strong>Por capacidad:</strong></p><ul><li><span class='hl'>IA estrecha (ANI)</span> — especializada en una tarea (lo que existe hoy)</li><li><span class='hl'>IA general (AGI)</span> — capacidad humana completa (aún no existe)</li><li><span class='hl'>Superinteligencia (ASI)</span> — supera al humano en todo (teórica)</li></ul><p><strong>Por enfoque:</strong></p><ul><li><span class='hl'>IA simbólica</span> — reglas lógicas explícitas</li><li><span class='hl'>IA conexionista</span> — redes neuronales que aprenden de datos</li><li><span class='hl'>IA híbrida</span> — combina ambos enfoques</li></ul>", quiz: { q: "¿Cómo se llama la IA que usamos hoy, especializada en tareas específicas?", opts: ["AGI", "ASI", "ANI", "IA cuántica"], correct: 2 } },
-    { title: "IA en la vida cotidiana", content: "<h3>IA en la vida cotidiana</h3><p>La IA ya está en casi todo lo que usas:</p><ul><li><span class='hl'>Asistentes virtuales</span> — Siri, Alexa, Google Assistant</li><li><span class='hl'>Recomendaciones</span> — Netflix, Spotify, YouTube, TikTok</li><li><span class='hl'>Navegación</span> — Google Maps predice tráfico</li><li><span class='hl'>Email</span> — filtros de spam, respuestas sugeridas</li><li><span class='hl'>Redes sociales</span> — feed personalizado</li><li><span class='hl'>Finanzas</span> — detección de fraude</li><li><span class='hl'>Salud</span> — diagnóstico por imágenes</li></ul><p>Cada vez que desbloqueas tu teléfono con tu cara, la IA está trabajando.</p>", quiz: { q: "¿Cuál de estos NO usa IA típicamente?", opts: ["Filtro de spam", "Un interruptor de luz básico", "Recomendaciones de Netflix", "Google Maps"], correct: 1 } },
-    { title: "Ética y responsabilidad", content: "<h3>Ética y responsabilidad en IA</h3><p>Los principales desafíos éticos:</p><ul><li><span class='hl'>Sesgo algorítmico</span> — los modelos pueden perpetuar discriminación</li><li><span class='hl'>Privacidad</span> — la IA necesita datos personales</li><li><span class='hl'>Transparencia</span> — ¿cómo saber por qué un modelo tomó una decisión?</li><li><span class='hl'>Empleo</span> — automatización vs. nuevos roles</li><li><span class='hl'>Desinformación</span> — deepfakes, texto generado sin verificación</li></ul><p>La IA responsable busca que estos sistemas sean justos, transparentes y beneficiosos para todos.</p>", quiz: { q: "¿Qué es el sesgo algorítmico?", opts: ["Un error de código", "Cuando el modelo perpetúa discriminación", "Un tipo de red neuronal", "Una técnica de optimización"], correct: 1 } }
-  ]},
-  { title: "Datos y preparación", desc: "Datasets, limpieza, tipos de datos", icon: "ti-database", lessons: [
-    { title: "Tipos de datos", content: "<h3>Tipos de datos en IA</h3><p>Los datos son el combustible de la IA:</p><ul><li><span class='hl'>Estructurados</span> — tablas con filas y columnas (Excel, SQL)</li><li><span class='hl'>No estructurados</span> — texto, imágenes, audio, video (80% de los datos del mundo)</li><li><span class='hl'>Semi-estructurados</span> — JSON, XML, emails</li></ul><p><strong>Por tipo de variable:</strong></p><ul><li>Numéricos: continuos (temperatura) o discretos (cantidad)</li><li>Categóricos: nominales (color) u ordinales (talla S/M/L)</li><li>Texto: lenguaje natural</li><li>Temporales: series de tiempo</li></ul>", quiz: { q: "¿Qué porcentaje aproximado de los datos del mundo son no estructurados?", opts: ["20%", "50%", "80%", "95%"], correct: 2 } },
-    { title: "Limpieza de datos", content: "<h3>Limpieza de datos</h3><p>Basura entra, basura sale. La limpieza incluye:</p><ul><li><span class='hl'>Valores faltantes</span> — eliminar, imputar con media/mediana</li><li><span class='hl'>Duplicados</span> — identificar y eliminar registros repetidos</li><li><span class='hl'>Outliers</span> — detectar y decidir si son errores o datos válidos</li><li><span class='hl'>Formato</span> — unificar fechas, monedas, codificación</li><li><span class='hl'>Inconsistencias</span> — 'Colombia' vs 'colombia' vs 'CO'</li></ul><p>Se estima que los científicos de datos pasan el 60-80% de su tiempo limpiando datos.</p>", quiz: { q: "¿Qué técnica NO es parte de la limpieza de datos?", opts: ["Imputar valores faltantes", "Eliminar duplicados", "Entrenar una red neuronal", "Detectar outliers"], correct: 2 } },
-    { title: "Feature engineering", content: "<h3>Feature engineering</h3><p>Crear las variables correctas puede ser más importante que el algoritmo:</p><ul><li><span class='hl'>Transformación</span> — log, raíz cuadrada, normalización</li><li><span class='hl'>Codificación</span> — one-hot encoding para categorías</li><li><span class='hl'>Creación</span> — combinar variables (edad a partir de fecha de nacimiento)</li><li><span class='hl'>Selección</span> — elegir las variables más relevantes</li></ul><p>Un buen feature engineering puede mejorar un modelo simple más que un algoritmo complejo con features malos.</p>", quiz: { q: "¿Qué es one-hot encoding?", opts: ["Comprimir datos", "Convertir categorías en columnas binarias", "Eliminar variables", "Normalizar números"], correct: 1 } },
-    { title: "División de datos", content: "<h3>Train, validation, test</h3><p>Nunca evalúes un modelo con los mismos datos que usó para aprender:</p><ul><li><span class='hl'>Training set (60-80%)</span> — el modelo aprende de estos datos</li><li><span class='hl'>Validation set (10-20%)</span> — se usa para ajustar hiperparámetros</li><li><span class='hl'>Test set (10-20%)</span> — evaluación final, solo se usa una vez</li></ul><p><span class='hl'>Cross-validation</span> divide los datos en K partes y rota cuál es el set de validación, dando estimaciones más robustas.</p>", quiz: { q: "¿Por qué no debemos evaluar con los datos de entrenamiento?", opts: ["Es más lento", "Daría resultados optimistas irreales", "No hay suficiente memoria", "Python no lo permite"], correct: 1 } },
-    { title: "Herramientas para datos", content: "<h3>Herramientas esenciales</h3><ul><li><span class='hl'>Python + Pandas</span> — la combinación reina para datos tabulares</li><li><span class='hl'>NumPy</span> — operaciones numéricas eficientes</li><li><span class='hl'>Matplotlib / Seaborn</span> — visualización de datos</li><li><span class='hl'>Jupyter Notebooks</span> — entorno interactivo para explorar datos</li><li><span class='hl'>SQL</span> — consultar bases de datos</li><li><span class='hl'>Kaggle</span> — datasets gratuitos y competencias</li></ul><p>Empieza con Python + Pandas + un notebook.</p>", quiz: { q: "¿Cuál es la librería principal de Python para manipular tablas de datos?", opts: ["NumPy", "TensorFlow", "Pandas", "Flask"], correct: 2 } }
-  ]},
-  { title: "Machine learning", desc: "Supervisado, no supervisado, evaluación", icon: "ti-chart-dots-3", lessons: [
-    { title: "¿Qué es machine learning?", content: "<h3>¿Qué es machine learning?</h3><p>ML es la rama de la IA donde los sistemas <strong>aprenden de los datos</strong> sin ser programados explícitamente.</p><ul><li><span class='hl'>Programación tradicional</span>: Reglas + Datos = Resultado</li><li><span class='hl'>Machine learning</span>: Datos + Resultados = Reglas (el modelo)</li></ul><p>Tipos principales:</p><ul><li>Supervisado — aprende con ejemplos etiquetados</li><li>No supervisado — encuentra patrones sin etiquetas</li><li>Por refuerzo — aprende por prueba y error con recompensas</li></ul>", quiz: { q: "En ML, ¿qué reemplaza a las reglas escritas manualmente?", opts: ["Más código", "Datos de los que el modelo aprende", "Hardware especial", "Bases de datos"], correct: 1 } },
-    { title: "Aprendizaje supervisado", content: "<h3>Aprendizaje supervisado</h3><p>El modelo aprende de datos etiquetados (input → output conocido):</p><p><strong>Clasificación</strong> (predecir categoría):</p><ul><li>Email: spam o no spam</li><li>Imagen: gato o perro</li><li>Algoritmos: Logistic Regression, SVM, Random Forest, KNN</li></ul><p><strong>Regresión</strong> (predecir número):</p><ul><li>Precio de una casa</li><li>Temperatura mañana</li><li>Algoritmos: Linear Regression, Decision Tree, XGBoost</li></ul>", quiz: { q: "Predecir el precio de una casa es un problema de:", opts: ["Clasificación", "Regresión", "Clustering", "Refuerzo"], correct: 1 } },
-    { title: "Aprendizaje no supervisado", content: "<h3>Aprendizaje no supervisado</h3><p>No hay etiquetas. El modelo descubre estructura oculta:</p><ul><li><span class='hl'>Clustering</span> — agrupar datos similares (K-Means, DBSCAN)</li><li><span class='hl'>Reducción de dimensionalidad</span> — simplificar datos (PCA, t-SNE)</li><li><span class='hl'>Detección de anomalías</span> — encontrar lo inusual (fraude)</li><li><span class='hl'>Reglas de asociación</span> — 'quien compra pan suele comprar leche'</li></ul>", quiz: { q: "K-Means es un algoritmo de:", opts: ["Clasificación", "Regresión", "Clustering", "Generación de texto"], correct: 2 } },
-    { title: "Evaluación de modelos", content: "<h3>Evaluación de modelos</h3><p><strong>Clasificación:</strong></p><ul><li><span class='hl'>Accuracy</span> — porcentaje de predicciones correctas</li><li><span class='hl'>Precision</span> — de los que predijo positivo, cuántos lo eran</li><li><span class='hl'>Recall</span> — de los positivos reales, cuántos detectó</li><li><span class='hl'>F1-Score</span> — balance entre precision y recall</li></ul><p><strong>Regresión:</strong></p><ul><li><span class='hl'>MAE</span> — error absoluto medio</li><li><span class='hl'>RMSE</span> — raíz del error cuadrático medio</li><li><span class='hl'>R²</span> — proporción de varianza explicada</li></ul>", quiz: { q: "Si necesitas detectar TODOS los fraudes, ¿qué métrica priorizas?", opts: ["Precision", "Recall", "Accuracy", "R²"], correct: 1 } },
-    { title: "Overfitting y regularización", content: "<h3>Overfitting y regularización</h3><p><span class='hl'>Overfitting</span>: el modelo memoriza los datos pero falla con datos nuevos.</p><p><span class='hl'>Underfitting</span>: el modelo es demasiado simple.</p><p><strong>Soluciones:</strong></p><ul><li>Más datos de entrenamiento</li><li><span class='hl'>Regularización</span> (L1/Lasso, L2/Ridge)</li><li>Cross-validation</li><li>Early stopping</li><li>Dropout en redes neuronales</li></ul>", quiz: { q: "99% accuracy en training pero 55% en test es:", opts: ["Underfitting", "Overfitting", "Regularización", "Cross-validation"], correct: 1 } }
-  ]},
-  { title: "Deep learning", desc: "Redes neuronales, CNNs, RNNs", icon: "ti-network", lessons: [
-    { title: "Redes neuronales básicas", content: "<h3>Redes neuronales artificiales</h3><p>Inspiradas en el cerebro, una red neuronal tiene:</p><ul><li><span class='hl'>Neuronas</span> — nodos con pesos y función de activación</li><li><span class='hl'>Capas</span> — input, hidden layers, output</li><li><span class='hl'>Funciones de activación</span> — ReLU, sigmoid, softmax</li></ul><p><strong>Entrenamiento:</strong></p><ul><li>Forward pass: los datos fluyen hacia adelante</li><li>Loss function: mide el error</li><li>Backpropagation: calcula gradientes</li><li>Gradient descent: ajusta pesos</li></ul>", quiz: { q: "¿Qué hace la backpropagation?", opts: ["Genera datos nuevos", "Calcula gradientes para ajustar pesos", "Elimina neuronas", "Comprime el modelo"], correct: 1 } },
-    { title: "CNNs — visión por computadora", content: "<h3>Redes convolucionales (CNNs)</h3><p>Especializadas en imágenes:</p><ul><li><span class='hl'>Capas convolucionales</span> — detectan bordes, texturas, formas</li><li><span class='hl'>Pooling</span> — reduce dimensiones</li><li><span class='hl'>Fully connected</span> — clasifica al final</li></ul><p><strong>Aplicaciones:</strong></p><ul><li>Clasificación de imágenes</li><li>Detección de objetos (YOLO)</li><li>Reconocimiento facial</li><li>Diagnóstico médico</li></ul><p>Arquitecturas: LeNet, AlexNet, VGG, ResNet, EfficientNet.</p>", quiz: { q: "Las capas convolucionales detectan:", opts: ["Palabras en texto", "Patrones locales en imágenes", "Errores de código", "Relaciones temporales"], correct: 1 } },
-    { title: "RNNs y secuencias", content: "<h3>Redes recurrentes (RNNs)</h3><p>Para datos secuenciales:</p><ul><li><span class='hl'>RNN básica</span> — memoria a corto plazo, sufre vanishing gradients</li><li><span class='hl'>LSTM</span> — compuertas que resuelven el problema</li><li><span class='hl'>GRU</span> — versión simplificada de LSTM</li></ul><p><strong>Aplicaciones:</strong></p><ul><li>Traducción automática</li><li>Análisis de sentimiento</li><li>Predicción de series temporales</li><li>Reconocimiento de voz</li></ul><p>Los Transformers han superado a las RNNs en la mayoría de tareas de NLP.</p>", quiz: { q: "¿Qué problema resuelve LSTM?", opts: ["Velocidad", "Vanishing gradients en secuencias largas", "Uso de RAM", "Compatibilidad GPU"], correct: 1 } },
-    { title: "Frameworks de deep learning", content: "<h3>Frameworks de deep learning</h3><ul><li><span class='hl'>PyTorch</span> — favorito en investigación. Grafo dinámico, Pythonic. Meta</li><li><span class='hl'>TensorFlow / Keras</span> — popular en producción. Google</li><li><span class='hl'>JAX</span> — alto rendimiento, funcional. Google DeepMind</li><li><span class='hl'>Hugging Face</span> — ecosistema central para modelos preentrenados</li></ul><p><strong>Para empezar:</strong> PyTorch + Hugging Face.</p>", quiz: { q: "¿Cuál framework es más popular en investigación?", opts: ["TensorFlow", "PyTorch", "Scikit-learn", "Pandas"], correct: 1 } },
-    { title: "GPUs y entrenamiento", content: "<h3>GPUs y entrenamiento eficiente</h3><ul><li><span class='hl'>GPU</span> — miles de núcleos para operaciones paralelas. NVIDIA (CUDA)</li><li><span class='hl'>TPU</span> — chips de Google para TensorFlow</li><li><span class='hl'>Cloud</span> — Google Colab (gratis), AWS, GCP, Azure</li></ul><p><strong>Técnicas de eficiencia:</strong></p><ul><li>Mixed precision (FP16)</li><li>Gradient accumulation</li><li>Data parallelism</li><li>Model checkpointing</li></ul><p>Google Colab ofrece GPUs gratis — perfecto para empezar.</p>", quiz: { q: "¿Por qué se usan GPUs en deep learning?", opts: ["Son más baratas", "Procesan operaciones matriciales en paralelo", "Tienen más RAM", "Son más fáciles de programar"], correct: 1 } }
-  ]},
-  { title: "NLP y LLMs", desc: "Transformers, prompting, fine-tuning", icon: "ti-message-language", lessons: [
-    { title: "Introducción a NLP", content: "<h3>Procesamiento de lenguaje natural</h3><ul><li><span class='hl'>Tokenización</span> — dividir texto en unidades</li><li><span class='hl'>Embeddings</span> — vectores numéricos donde palabras similares están cerca</li><li><span class='hl'>Word2Vec, GloVe</span> — embeddings clásicos</li></ul><p><strong>Tareas de NLP:</strong></p><ul><li>Clasificación de texto (spam, sentimiento)</li><li>NER — entidades (nombres, fechas, lugares)</li><li>Traducción automática</li><li>Resumen automático</li><li>Question answering</li></ul>", quiz: { q: "¿Qué son los embeddings?", opts: ["Imágenes comprimidas", "Vectores numéricos que representan palabras", "Un tipo de base de datos", "Archivos de configuración"], correct: 1 } },
-    { title: "La arquitectura transformer", content: "<h3>Transformers: la revolución</h3><p>'Attention Is All You Need' (2017):</p><ul><li><span class='hl'>Self-attention</span> — cada token atiende a todos los demás</li><li><span class='hl'>Multi-head attention</span> — múltiples cabezas capturan distintas relaciones</li><li><span class='hl'>Positional encoding</span> — inyecta información del orden</li><li><span class='hl'>Paralelizable</span> — procesa toda la secuencia a la vez</li></ul><p><strong>Familias:</strong></p><ul><li>Encoder-only: BERT (entender texto)</li><li>Decoder-only: GPT, Claude (generar texto)</li><li>Encoder-decoder: T5, BART (transformar texto)</li></ul>", quiz: { q: "¿Qué mecanismo captura relaciones a larga distancia?", opts: ["Convolución", "Recurrencia", "Self-attention", "Pooling"], correct: 2 } },
-    { title: "LLMs y prompt engineering", content: "<h3>LLMs y prompt engineering</h3><p>GPT-4, Claude, Llama, Gemini son transformers entrenados masivamente:</p><ul><li><span class='hl'>Preentrenamiento</span> — predecir la siguiente palabra</li><li><span class='hl'>Fine-tuning</span> — ajustar para tareas específicas</li><li><span class='hl'>RLHF</span> — aprender de retroalimentación humana</li></ul><p><strong>Prompt engineering:</strong></p><ul><li>Zero-shot: solo la instrucción</li><li>Few-shot: incluir ejemplos</li><li>Chain-of-thought: razonamiento paso a paso</li><li>System prompts: contexto y personalidad</li></ul>", quiz: { q: "¿Qué es few-shot prompting?", opts: ["Entrenar con pocos datos", "Incluir ejemplos en el prompt", "Reducir el modelo", "Un tipo de fine-tuning"], correct: 1 } },
-    { title: "RAG y herramientas", content: "<h3>RAG y tool use</h3><p><span class='hl'>RAG (Retrieval-Augmented Generation):</span></p><ul><li>Conecta el LLM a bases de conocimiento externas</li><li>Busca información relevante y la inyecta en el contexto</li><li>Reduce alucinaciones con fuentes reales</li></ul><p><span class='hl'>Tool use / Function calling:</span></p><ul><li>El LLM invoca herramientas externas (APIs, calculadoras)</li><li>Extiende capacidades más allá del texto</li><li>Permite agentes que ejecutan acciones reales</li></ul>", quiz: { q: "¿Cuál es el principal beneficio de RAG?", opts: ["Hace el modelo más rápido", "Reduce alucinaciones con fuentes externas", "Ahorra dinero", "Simplifica el código"], correct: 1 } },
-    { title: "Fine-tuning y adaptación", content: "<h3>Fine-tuning de modelos</h3><ul><li><span class='hl'>Full fine-tuning</span> — ajustar todos los parámetros. Costoso</li><li><span class='hl'>LoRA / QLoRA</span> — ajustar un pequeño conjunto adicional. Eficiente</li><li><span class='hl'>Prefix tuning</span> — tokens entrenables al inicio</li><li><span class='hl'>PEFT</span> — familia de técnicas eficientes</li></ul><p><strong>Cuándo hacer fine-tuning:</strong></p><ul><li>Prompt engineering no es suficiente</li><li>Datos específicos de dominio</li><li>Formato de salida muy consistente</li><li>Alto volumen (optimizar costo)</li></ul>", quiz: { q: "¿Qué ventaja tiene LoRA?", opts: ["Mejor calidad siempre", "Necesita menos recursos de GPU", "No requiere datos", "Es más antiguo"], correct: 1 } }
-  ]},
-  { title: "IA en producción", desc: "APIs, despliegue, agentes, seguridad", icon: "ti-rocket", lessons: [
-    { title: "APIs de IA", content: "<h3>Usando APIs de IA</h3><ul><li><span class='hl'>Anthropic API (Claude)</span> — text generation, analysis, coding</li><li><span class='hl'>OpenAI API</span> — GPT-4, DALL-E, Whisper</li><li><span class='hl'>Google AI</span> — Gemini, Cloud Vision</li><li><span class='hl'>Hugging Face Inference</span> — miles de modelos open-source</li></ul><p><strong>Conceptos clave:</strong></p><ul><li>Tokens — unidad de facturación y contexto</li><li>Rate limits — límites por minuto</li><li>Streaming — respuesta token por token</li><li>Context window — texto máximo que puede procesar</li></ul>", quiz: { q: "¿Qué es un token en APIs de LLMs?", opts: ["Moneda digital", "Unidad mínima de texto que procesa el modelo", "Clave de autenticación", "Un tipo de error"], correct: 1 } },
-    { title: "Construir agentes de IA", content: "<h3>Agentes de IA</h3><p>Un agente es un LLM que razona, planifica y actúa:</p><ul><li><span class='hl'>Percepción</span> — recibe información</li><li><span class='hl'>Razonamiento</span> — decide qué hacer</li><li><span class='hl'>Acción</span> — ejecuta herramientas</li><li><span class='hl'>Memoria</span> — mantiene contexto</li></ul><p><strong>Frameworks:</strong></p><ul><li>Claude Agent SDK (Anthropic)</li><li>LangChain / LangGraph</li><li>CrewAI (agentes colaborativos)</li><li>AutoGen (Microsoft)</li></ul>", quiz: { q: "¿Qué diferencia a un agente de un chatbot?", opts: ["Usa más RAM", "Puede ejecutar acciones y usar herramientas", "Mejor interfaz", "Es más barato"], correct: 1 } },
-    { title: "MLOps y despliegue", content: "<h3>MLOps</h3><ul><li><span class='hl'>Versionado</span> — datos, modelos y código (DVC, MLflow)</li><li><span class='hl'>Serving</span> — modelo como API (FastAPI, TorchServe)</li><li><span class='hl'>Monitoreo</span> — detectar drift y degradación</li><li><span class='hl'>CI/CD para ML</span> — pipelines automatizados</li></ul><p><strong>Plataformas:</strong></p><ul><li>Cloud: AWS SageMaker, GCP Vertex AI, Azure ML</li><li>Self-hosted: MLflow, Kubeflow</li><li>Serverless: Modal, Replicate</li></ul>", quiz: { q: "¿Qué es model drift?", opts: ["Un bug", "Degradación del modelo con datos nuevos", "Mover el modelo de servidor", "Un tipo de optimización"], correct: 1 } },
-    { title: "Seguridad en IA", content: "<h3>Seguridad en aplicaciones de IA</h3><ul><li><span class='hl'>Prompt injection</span> — manipular el prompt</li><li><span class='hl'>Data poisoning</span> — contaminar datos</li><li><span class='hl'>Model extraction</span> — robar un modelo</li><li><span class='hl'>PII leakage</span> — revelar datos personales</li></ul><p><strong>Defensas:</strong></p><ul><li>Input validation</li><li>Output filtering</li><li>Rate limiting</li><li>Guardrails</li><li>Red teaming antes de lanzar</li></ul>", quiz: { q: "¿Qué es prompt injection?", opts: ["Inyectar SQL", "Manipular el prompt para alterar el comportamiento", "Método de entrenamiento", "Comprimir prompts"], correct: 1 } },
-    { title: "El futuro de la IA", content: "<h3>Hacia dónde va la IA</h3><ul><li><span class='hl'>Modelos multimodales</span> — texto, imagen, audio, video en uno</li><li><span class='hl'>Agentes autónomos</span> — tareas complejas de principio a fin</li><li><span class='hl'>IA en el edge</span> — modelos en dispositivos móviles</li><li><span class='hl'>Open source</span> — Llama, Mistral democratizan el acceso</li><li><span class='hl'>Regulación</span> — EU AI Act, marcos normativos</li><li><span class='hl'>IA + ciencia</span> — AlphaFold, fármacos, materiales</li></ul><p>Aprender IA hoy te posiciona en la habilidad más demandada de la próxima década.</p>", quiz: { q: "¿Qué logró AlphaFold?", opts: ["Ganar en ajedrez", "Predecir estructura 3D de proteínas", "Crear imágenes realistas", "Conducir autos autónomos"], correct: 1 } }
-  ]}
-];
-
-let currentQ = 0, score = 0, userLevel = 0, currentModule = 0, currentLesson = 0, completedLessons = new Set();
-
-function loadProgress() {
-  try {
-    const saved = localStorage.getItem('aprende-ia-progress');
-    if (saved) {
-      const data = JSON.parse(saved);
-      completedLessons = new Set(data.completed || []);
-      currentModule = data.currentModule || 0;
-      currentLesson = data.currentLesson || 0;
-      userLevel = data.userLevel || 0;
-      if (data.started) { show('course'); renderModules(); showTab('ruta'); }
-    }
-  } catch(e) {}
-}
-
-function saveProgress() {
-  try {
-    localStorage.setItem('aprende-ia-progress', JSON.stringify({
-      completed: [...completedLessons],
-      currentModule, currentLesson, userLevel, started: true
-    }));
-  } catch(e) {}
-}
-
-function show(id) {
-  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-  document.getElementById('screen-'+id).classList.add('active');
-  window.scrollTo(0, 0);
-}
-
-function startTest() { currentQ = 0; score = 0; show('test'); renderQuestion(); }
-
-function renderQuestion() {
-  const q = questions[currentQ];
-  document.getElementById('test-progress').style.width = ((currentQ+1)*10)+'%';
-  document.getElementById('q-counter').textContent = (currentQ+1)+' / 10';
-  document.getElementById('q-text').textContent = q.q;
-  const opts = document.getElementById('q-options');
-  opts.innerHTML = '';
-  q.opts.forEach((o,i) => {
-    const btn = document.createElement('button');
-    btn.className = 'opt-btn';
-    btn.textContent = o;
-    btn.onclick = () => answerQ(i);
-    opts.appendChild(btn);
-  });
-}
-
-function answerQ(i) {
-  if (i === questions[currentQ].correct) score += questions[currentQ].diff + 1;
-  currentQ++;
-  if (currentQ < questions.length) renderQuestion();
-  else showResults();
-}
-
-function showResults() {
-  const maxScore = questions.reduce((s,q) => s+q.diff+1, 0);
-  const pct = Math.round((score/maxScore)*100);
-  if (pct < 20) userLevel = 0;
-  else if (pct < 45) userLevel = 1;
-  else if (pct < 65) userLevel = 2;
-  else if (pct < 85) userLevel = 3;
-  else userLevel = 4;
-  const levels = [
-    { name: "Principiante total", desc: "Empezarás desde los fundamentos. La ruta está diseñada para que avances a tu ritmo, sin prisa." },
-    { name: "Principiante con nociones", desc: "Tienes idea general de qué es IA. Reforzarás bases y entrarás directo a datos." },
-    { name: "Intermedio", desc: "Conoces los conceptos clave. Tu ruta comienza en machine learning." },
-    { name: "Intermedio-avanzado", desc: "Buen dominio de ML. Seguirás con deep learning y redes neuronales." },
-    { name: "Avanzado", desc: "Conocimiento sólido. Tu ruta se enfoca en NLP, LLMs y producción." }
-  ];
-  const lv = levels[userLevel];
-  show('results');
-  const circ = document.getElementById('score-circle');
-  setTimeout(() => { circ.style.strokeDashoffset = 263.9 - (263.9 * pct / 100); }, 100);
-  document.getElementById('score-text').textContent = pct+'%';
-  const badge = document.getElementById('level-badge');
-  badge.textContent = lv.name;
-  badge.className = 'level-badge lv-'+Math.min(userLevel,3);
-  document.getElementById('result-title').textContent = lv.name;
-  document.getElementById('result-desc').textContent = lv.desc;
-}
-
-function goToCourse() {
-  currentModule = userLevel;
-  currentLesson = 0;
-  show('course');
-  renderModules();
-  showTab('ruta');
-  saveProgress();
-  setupShareLinks();
-}
-
-function setupShareLinks() {
-  const url = encodeURIComponent(window.location.href);
-  const text = encodeURIComponent('Estoy aprendiendo IA desde cero con esta plataforma gratuita. 6 niveles, 30 lecciones, test de nivel incluido.');
-  document.getElementById('share-wa').href = 'https://wa.me/?text='+text+'%20'+url;
-  document.getElementById('share-tw').href = 'https://twitter.com/intent/tweet?text='+text+'&url='+url;
-  document.getElementById('share-li').href = 'https://www.linkedin.com/sharing/share-offsite/?url='+url;
-}
-
-function copyLink() {
-  navigator.clipboard.writeText(window.location.href).then(() => {
-    const btn = event.target.closest('.share-btn');
-    const orig = btn.innerHTML;
-    btn.innerHTML = '<i class="ti ti-check" aria-hidden="true"></i> Copiado';
-    setTimeout(() => btn.innerHTML = orig, 2000);
-  });
-}
-
-function renderModules() {
-  const list = document.getElementById('module-list');
-  list.innerHTML = '';
-  let totalDone = 0;
-  modules.forEach((m,i) => {
-    const doneCount = m.lessons.filter((_,li) => completedLessons.has(i+'-'+li)).length;
-    totalDone += doneCount;
-    const allDone = doneCount === m.lessons.length;
-    const isCurrent = i === currentModule;
-    const isLocked = i > currentModule && !allDone && !modules.slice(0,i).every((mod,mi) => mod.lessons.every((_,li) => completedLessons.has(mi+'-'+li)));
-    const div = document.createElement('div');
-    div.className = 'module-item' + (allDone?' done':'') + (isCurrent?' current':'') + (isLocked?' locked':'');
-    const color = allDone ? 'var(--success)' : isCurrent ? 'var(--accent)' : 'var(--text-3)';
-    const statusIcon = isLocked ? 'ti-lock' : allDone ? 'ti-circle-check' : isCurrent ? 'ti-player-play' : 'ti-circle';
-    const statusColor = isLocked ? 'var(--text-3)' : allDone ? 'var(--success)' : isCurrent ? 'var(--accent)' : 'var(--text-3)';
-    div.innerHTML = '<i class="ti '+m.icon+' mod-icon" aria-hidden="true" style="color:'+color+'"></i><div class="mod-info"><div class="mod-title">'+(i+1)+'. '+m.title+'</div><div class="mod-desc">'+m.desc+' — '+doneCount+'/'+m.lessons.length+' lecciones</div></div><i class="ti '+statusIcon+' mod-status" aria-hidden="true" style="color:'+statusColor+'"></i>';
-    if (!isLocked) div.onclick = () => { currentModule = i; currentLesson = 0; renderModules(); showTab('leccion'); renderLesson(); };
-    list.appendChild(div);
-  });
-  const total = modules.reduce((s,m) => s+m.lessons.length, 0);
-  document.getElementById('s-level').textContent = currentModule + 1;
-  document.getElementById('s-progress').textContent = Math.round((totalDone/total)*100)+'%';
-  document.getElementById('s-lessons').textContent = totalDone;
-}
-
-function showTab(t, btn) {
-  ['ruta','leccion','quiz'].forEach(tb => document.getElementById('tab-'+tb).style.display = tb===t?'block':'none');
-  document.querySelectorAll('.nav-tab').forEach(l => l.classList.remove('active'));
-  if (btn) btn.classList.add('active');
-  else document.querySelector('.nav-tab[data-tab="'+t+'"]').classList.add('active');
-  if (t==='leccion') { renderLessonNav(); renderLesson(); }
-  if (t==='quiz') renderQuiz();
-}
-
-function renderLessonNav() {
-  const nav = document.getElementById('lesson-nav');
-  const m = modules[currentModule];
-  nav.innerHTML = '';
-  m.lessons.forEach((l,i) => {
-    const pill = document.createElement('button');
-    const done = completedLessons.has(currentModule+'-'+i);
-    pill.className = 'lesson-pill' + (i===currentLesson?' active':'') + (done&&i!==currentLesson?' completed':'');
-    pill.textContent = (i+1);
-    pill.title = l.title;
-    pill.onclick = () => { currentLesson = i; renderLessonNav(); renderLesson(); };
-    nav.appendChild(pill);
-  });
-}
-
-function renderLesson() {
-  const m = modules[currentModule];
-  const l = m.lessons[currentLesson];
-  document.getElementById('lesson-area').innerHTML = '<div class="breadcrumb"><i class="ti ti-book" style="font-size:14px" aria-hidden="true"></i> '+m.title+' — Lección '+(currentLesson+1)+' de '+m.lessons.length+'</div><div class="lesson-card">'+l.content+'</div>';
-}
-
-function renderQuiz() {
-  const m = modules[currentModule];
-  const l = m.lessons[currentLesson];
-  if (!l.quiz) { document.getElementById('quiz-area').innerHTML = '<p style="color:var(--text-2);text-align:center;padding:2rem 0;">No hay quiz para esta lección.</p>'; return; }
-  const qa = document.getElementById('quiz-area');
-  qa.innerHTML = '<div class="breadcrumb">Quiz — '+l.title+'</div><div class="q-text">'+l.quiz.q+'</div><div class="options" id="quiz-opts"></div>';
-  l.quiz.opts.forEach((o,i) => {
-    const btn = document.createElement('button');
-    btn.className = 'opt-btn';
-    btn.textContent = o;
-    btn.onclick = () => {
-      document.querySelectorAll('#quiz-opts .opt-btn').forEach((b,bi) => {
-        b.disabled = true;
-        if (bi === l.quiz.correct) b.classList.add('correct');
-        else if (bi === i && i !== l.quiz.correct) b.classList.add('wrong');
-      });
-      const fb = document.createElement('div');
-      fb.className = 'quiz-feedback '+(i===l.quiz.correct?'quiz-correct':'quiz-wrong');
-      fb.textContent = i===l.quiz.correct ? '¡Correcto! Excelente comprensión.' : 'Incorrecto. La respuesta correcta es: '+l.quiz.opts[l.quiz.correct];
-      qa.appendChild(fb);
-    };
-    document.getElementById('quiz-opts').appendChild(btn);
-  });
-}
-
-function completeLesson() {
-  completedLessons.add(currentModule+'-'+currentLesson);
-  const m = modules[currentModule];
-  if (currentLesson < m.lessons.length - 1) {
-    currentLesson++;
-  } else {
-    const allDone = m.lessons.every((_,i) => completedLessons.has(currentModule+'-'+i));
-    if (allDone && currentModule < modules.length - 1) { currentModule++; currentLesson = 0; }
-  }
-  saveProgress();
-  renderModules();
-  renderLessonNav();
-  renderLesson();
-}
-
-function prevLesson() {
-  if (currentLesson > 0) { currentLesson--; }
-  else if (currentModule > 0) { currentModule--; currentLesson = modules[currentModule].lessons.length - 1; }
-  renderModules();
-  renderLessonNav();
-  renderLesson();
-}
-
-function renderPreview() {
-  const list = document.getElementById('preview-modules');
-  if (!list) return;
-  list.innerHTML = '';
-  modules.forEach((m,i) => {
-    const div = document.createElement('div');
-    div.className = 'module-item';
-    div.style.cursor = 'default';
-    div.innerHTML = '<i class="ti '+m.icon+' mod-icon" aria-hidden="true" style="color:var(--accent)"></i><div class="mod-info"><div class="mod-title">'+(i+1)+'. '+m.title+'</div><div class="mod-desc">'+m.desc+' — '+m.lessons.length+' lecciones</div></div>';
-    list.appendChild(div);
-  });
-}
-
-loadProgress();
-renderPreview();
-setupShareLinks();
-</script>
+<script src="data.js"></script>
+<script src="data2.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
